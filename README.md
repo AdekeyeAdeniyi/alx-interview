@@ -1,5 +1,4 @@
 ALX INTERVIEW QUESTIONS
 ======================
 
-[y] Pascal's Triangle
----------------------
+[x] Pascal's Triangle
