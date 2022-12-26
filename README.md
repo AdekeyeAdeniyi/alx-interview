@@ -1,4 +1,4 @@
 ALX INTERVIEW QUESTIONS
 ======================
 
-[x] Pascal's Triangle
+[X]Pascal's Triangle
