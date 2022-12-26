@@ -1,7 +1,5 @@
-ALX INTERVIEW QUESTION ( PASCAL'S TRIANGLE)
-============
+ALX INTERVIEW QUESTIONS
+======================
 
-ALGORITHM
-```
-Loading.....
-```
+[y] Pascal's Triangle
+---------------------
