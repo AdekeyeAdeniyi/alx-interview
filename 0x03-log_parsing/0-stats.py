@@ -1,35 +1,44 @@
 #!/usr/bin/python3
+""" A script that reads stdin line by line and computes metrics """
+
 import sys
 
-data = sys.stdin
-result = []
-fileSize = 0
+
+def print_status(dict, size):
+    """Print the format"""
+    print("File size: {}".format(size))
+    for key in sorted(dict.keys()):
+        if dict[key] != 0:
+            print("{}: {}".format(key, dict[key]))
+
+
+status_dict = {'200': 0, '301': 0, '400': 0, '401': 0, '403': 0,
+               '404': 0, '405': 0, '500': 0}
+
+file_size = 0
 count = 0
 
-
-def printResult(code, Size):
-    codeDict = dict((i, code.count(i)) for i in code)
-    print(f"File size: {Size}")
-    for [val, key] in sorted(codeDict.items()):
-        if(val.isdigit()):
-            print(f"{val} : {key}")
-
-
 try:
-    for line in data:
-        data = str(line[-8:]).split(' ')
+    for line in sys.stdin:
+        if count != 0 and count % 10 == 0:
+            print_status(status_dict, file_size)
+
+        el = line.split(" ")
         count += 1
+
         try:
-            fileSize += int(data[1])
+            file_size += int(el[-1])
         except:
             pass
+
         try:
-            result.append(data[0].strip())
+            if el[-2] in status_dict.keys():
+                status_dict[el[-2]] += 1
         except:
             pass
-        if (count != 0 and count % 10 == 0):
-            printResult(result, fileSize)
-    printResult(result, fileSize)
+    print_status(status_dict, file_size)
+
+
 except KeyboardInterrupt:
-    printResult(result, fileSize)
+    print_status(status_dict, file_size)
     raise
