@@ -5,3 +5,4 @@ ALX INTERVIEW QUESTIONS
 - [x] [Lock Boxes](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x01-lockboxes/0-lockboxes.py)
 - [x] [Minimum Operations](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x02-minimum_operations/0-minoperations.py)
 - [x] [Log Parsing](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x03-log_parsing/0-stats.py)
+- [x] [UTF-8 Validation](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x04-utf8_validation/0-validate_utf8.py)
