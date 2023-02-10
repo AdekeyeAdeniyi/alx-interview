@@ -16,21 +16,22 @@ const setOption = (url) => {
   };
 };
 
-request(setOption(API_ADDRESS), (error, response, body) => {
+request(setOption(API_ADDRESS), async (error, response, body) => {
   if (!error && response.statusCode === 200) {
     const { characters } = JSON.parse(body);
-    Requestcharacters(characters);
+    await Requestcharacters(characters, 0);
   }
 }
 );
 
-const Requestcharacters = (characters) => {
-  [...characters].forEach(url => {
-    request(setOption(url), (error, response, body) => {
-      if (!error && response.statusCode === 200) {
+const Requestcharacters = async (characters, x) => {
+  if (x <= characters.length) {
+    request(setOption(characters[x]), (err, res, body) => {
+      if (!err && res.statusCode === 200) {
         const { name } = JSON.parse(body);
         console.log(name);
+        Requestcharacters(characters, x + 1);
       }
     });
-  });
+  }
 };
