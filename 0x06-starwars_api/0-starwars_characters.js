@@ -1,5 +1,5 @@
+#!/usr/bin/node
 const request = require('request');
-
 const filmId = process.argv[2];
 
 if (!filmId || isNaN(filmId)) {
