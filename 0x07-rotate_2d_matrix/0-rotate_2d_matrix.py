@@ -17,12 +17,12 @@ Returns:
 
 
 def rotate_2d_matrix(matrix):
-    newMatrix = []
-    if len(matrix) <= 1 or not matrix:
-        return matrix
-    for i in range(len(matrix)):
-        arr = [0] * len(matrix)
-        for j in range(len(matrix) - 1, -1, -1):
-            arr[j] = matrix[j][i]
-        newMatrix.append(list(reversed(arr)))
-    return newMatrix
+    if not matrix or len(matrix) <= 1:
+        return
+    n = len(matrix)
+    for i in range(n // 2):
+        for j in range(i, n - i - 1):
+            matrix[i][j], matrix[n - 1 - j][i], \
+                matrix[n - 1 - i][n - 1 - j], matrix[j][n - 1 - i] = \
+                matrix[n - 1 - j][i], matrix[n - 1 - i][n - 1 - j], \
+                matrix[j][n - 1 - i], matrix[i][j]

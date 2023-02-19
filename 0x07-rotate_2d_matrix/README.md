@@ -8,13 +8,16 @@
 
 ## Pseudocode  Code
 ```sql
-    1. Initialize the input matrix.
-    2. For each index i in the range from 0 to the length of the matrix:
-    3. Initialize an empty array arr of length equal to the number of rows in the matrix.
-    4. For each index j in the range from the length of the matrix minus 1 to 0 (inclusive) in reverse order:
-        5. Set the j-th element of arr to the i-th element of the j-th row of the matrix.
-    6. Reverse the order of the elements in arr.
-    7. Print arr.
+    1. Define a function called "rotate_2d_matrix" that takes a matrix as input
+    2. Check if the matrix is not empty or has only one row, and return it if so
+    3. Find the length of the matrix and divide it by 2
+    4. Loop from 0 to the length of the matrix divided by 2
+    5. Loop from i to the length of the matrix minus i minus 1
+    6. Swap the values in the matrix at the following locations:
+    a. matrix[i][j], matrix[n-1-j][i], matrix[n-1-i][n-1-j], matrix[j][n-1-i]
+    b. where n is the length of the matrix
+    7. Return the modified matrix
+
 ```
 
 ```js
