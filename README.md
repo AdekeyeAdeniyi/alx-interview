@@ -1,5 +1,5 @@
-ALX INTERVIEW QUESTIONS
-======================
+# ALX INTERVIEW QUESTIONS
+
 
 - [x] [Pascal's Triangle](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x00-pascal_triangle/0-pascal_triangle.py)
 - [x] [Lock Boxes](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x01-lockboxes/0-lockboxes.py)
@@ -8,3 +8,4 @@ ALX INTERVIEW QUESTIONS
 - [x] [UTF-8 Validation](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x04-utf8_validation/0-validate_utf8.py)
 - [x] [Backtracking](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x05-nqueens/0-nqueens.py)
 - [x] [API Request](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x06-starwars_api/0-starwars_characters.js)
+- [x] [Rotate 2D Matrix Clockwise](https://github.com/AdekeyeAdeniyi/alx-interview/blob/main/0x07-rotate_2d_matrix/0-rotate_2d_matrix.py)
