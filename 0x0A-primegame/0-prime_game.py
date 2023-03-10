@@ -20,7 +20,7 @@ Returns:
 """
 
 
-def isWinner1(x, nums):
+def isWinner(x, nums):
     if not nums or x < 1:
         return None
     n = max(nums)
