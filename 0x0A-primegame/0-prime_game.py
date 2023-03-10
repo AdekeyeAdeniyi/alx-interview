@@ -9,14 +9,6 @@ they take turns choosing a prime number from the set and removing that number
 and its multiples from the set.
 The player that cannot make a move loses the game.
 
-Args:
-    x(int): number of rounds
-    n(list): list of numbers
-
-Returns:
-    "Maria" if no prime number for Ben
-    "Ben" if no prime number for Maria
-    "None" if no winner
 """
 
 
