@@ -1,22 +1,13 @@
 #!/usr/bin/python3
-
-"""
-Prime Game
-
-Maria and Ben are playing a game.
-Given a set of consecutive integers starting from 1 up to and including n,
-they take turns choosing a prime number from the set and removing that number
-and its multiples from the set.
-The player that cannot make a move loses the game.
-
-"""
+""" Prime Game """
 
 
 def isWinner(x, nums):
+    """ Maria and Ben are playing a game """
     if not nums or x < 1:
         return None
     n = max(nums)
-    K = [b for b in range(max(n + 1, 2))]
+    K = [True for _ in range(max(n + 1, 2))]
     for i in range(2, int(n**0.5) + 1):
         if not K[i]:
             continue
@@ -30,12 +21,11 @@ def isWinner(x, nums):
             c += 1
         K[i] = c
 
-    players = {"maria": 0, "ben": 0}
+    P = 0
     for n in nums:
-        players["maria"] += K[n] % 2 == 1
-
-    if players["maria"] * 2 == len(nums):
+        P += K[n] % 2 == 1
+    if P * 2 == len(nums):
         return None
-    if players["maria"] * 2 > len(nums):
+    if P * 2 > len(nums):
         return "Maria"
     return "Ben"
